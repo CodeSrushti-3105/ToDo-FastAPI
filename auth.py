@@ -11,7 +11,8 @@ from models import User
 from database import engine
 
 # Secret key for JWT
-SECRET_KEY = "your-secret-key"  # 🔐 Replace with env var in real apps
+import os
+SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret") # 🔐 Replace with env var in real apps
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
