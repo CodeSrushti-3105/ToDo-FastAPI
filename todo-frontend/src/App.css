@@ -1,49 +1,104 @@
-/* App.css — clean and simple styling */
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
 
 .container {
   max-width: 600px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  border: 2px solid #eee;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  font-family: sans-serif;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.auth-form,
-.task-form {
-  margin-bottom: 1rem;
+h2 {
+  text-align: center;
+  color: #4a90e2;
+}
+
+.auth-form, .task-form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.auth-form input,
+.task-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.auth-form button,
+.task-form button,
+.logout-btn {
+  padding: 10px;
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover,
+.task-form button:hover,
+.logout-btn:hover {
+  background-color: #3a78c2;
+}
+
+.auth-form p {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.auth-form p button {
+  background: none;
+  color: #4a90e2;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logout-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 1rem;
 }
 
 .task-list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 .task-list li {
-  margin-bottom: 0.5rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
 }
 
-button {
-  padding: 0.3rem 0.7rem;
-  border: none;
-  background-color: #1976d2;
+.task-list button {
+  margin-left: 8px;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  background-color: #f66;
   color: white;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0d47a1;
-}
-
-.logout-btn {
-  margin-bottom: 1rem;
-  background-color: crimson;
+.task-list button:first-of-type {
+  background-color: #3cb371;
 }
